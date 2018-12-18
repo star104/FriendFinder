@@ -7,6 +7,10 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../public/survey.html"));
     });
 
+    app.get("/test", function(req, res){
+        res.send("Hello Star");
+    })
+
     app.get("*", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/home.html"));
     });
